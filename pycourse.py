@@ -47,11 +47,14 @@ class Solution(object):
             for item_2 in values:
                 print(item_1, item_2)
     
-    def bigO_logN(values):
+    def bigO_logN(value):
         x = values
-        # while(x > 0):
-            # y = 2 + 2
-            # x = x # 2
+        while(x > 0):
+            y = 2 + 2
+            x = x/2 # X is cut in half every time
+            print(x/2)
+
+    def bigO(value)
 
     def print_once(values):
          # O(n)
@@ -142,7 +145,7 @@ match = 1
 # print(s.matcher(first, 1))
 # print(s.create_list(5))
 # print(s.printer(10))
-print(s.bigO_logN(first))
+print(s.bigO_logN(10))
 
 
 
