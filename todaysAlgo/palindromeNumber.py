@@ -20,22 +20,30 @@
 
 class Solution:
     def isPalindrome(self, x):
+# define isPalindrome with 2 variable self and x
         """
         :type x: int
         :rtype: bool
         """
         x_str = str(x)
+        print('x_str: ', x_str)
         total_len = len(x_str)
+        print('total_len: ', total_len)
+        
         if total_len == 1:
             return True
-        # If odd, theres a halfpoint, this index isn't included
-        # If even, theres just two halfed strings
-        x_str_1 = x_str[0:total_len//2]
+        #If odd, theres a halfpoint, this index isn't included
+        #If even, theres just two halfed strings
+        x_str_1 = x_str[0:total_len//2:]
+        print('x_str_1: ', x_str_1)
         x_str_2 = x_str[-(total_len//2):] # Tail of string to halfpoint/halfed
+        print('x_str_2: ', x_str_2)
         if x_str_1 == x_str_2[::-1]: # x_str_2[::-1] reverses string
             return True
+        
         return False
 
 s = Solution()
-print(s.isPalindrome("racecr"))
+print(s.isPalindrome("racecar"))
+
 
